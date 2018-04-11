@@ -1,0 +1,64 @@
+
+<header>
+          <div class="header">
+            
+              <div class="wrap">
+     
+              <div class="top-nav" >
+                  <div class="dropdown" >
+                  <ul class="flexy-menu thick orange" >
+                      
+                            <li class="active"><a href="/">Home</a></li>
+                           
+                                <li *ngIf="!isLogin">
+                                  <a routerLink="/login" class="dropdown-item">Login</a>
+                                </li>
+                                <li class="nav-item" *ngIf="!isLogin">
+                                  <a class="dropdown-item" href="#" routerLink="/register">Registrarse</a>
+                                </li>
+                                <li class="nav-item" *ngIf="isLogin">
+                                  <a class="dropdown-item"href="#" (click)="onClickLogout()" >Salir</a>
+                                </li>
+                              
+                              
+                              
+                             
+                        
+                         
+                            <li class="nav-item" *ngIf="!isLogin">
+                               
+                              </li>
+                              <li class="nav-item" *ngIf="isLogin">
+                                <a href="" routerLink="/insertar">Comienza aquí</a>
+                              </li>
+                              <li class="nav-item" *ngIf="isLogin">
+                                  <a href="" routerLink="/detalles">Ver viajes</a>
+                                </li>
+                          
+                       
+            
+                         
+                          </ul>
+                        </div>
+                       <ul *ngFor="let model of coursesObservable | async"  class="flexy-menu thick orange" >
+
+
+                          <li class="nav-item" *ngIf="model.usuario==nombreUsuario">
+                                 
+                              <a href="" routerLink="/viajes">Viajes</a>
+                         
+                        </li>
+                       </ul>
+                       
+               
+                  
+              </div>
+              <!--- //End-top-nav---->
+              <div class="clear"> </div>
+            </div>
+            <!---//End-header---->
+          </div>
+          <script>
+              new UISearch( document.getElementById( 'sb-search' ) );
+            </script>
+</header>

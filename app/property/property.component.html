@@ -1,0 +1,76 @@
+
+        		<link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
+
+<div class="content-area blog-page padding-top-40" style="background-color: #FCFCFC; padding-bottom: 55px;">
+  <div class="container"  *ngFor="let viajes of coursesObservable | async" >
+      <div class="row" *ngIf="viajes.ciudad==city">
+          <div class="blog-lst col-md-12 pl0" id="print-section">
+              <section id="id-100" class="post single">
+
+                  <div class="post-header single">
+                      <div class="">
+                          <h2 class="wow fadeInLeft animated" >{{viajes.ciudad}}</h2>
+                  
+                        
+                          <div class="title-line wow fadeInRight animated"></div>
+                      </div>
+                      <div class="row wow fadeInRight animated">
+                          <div class="col-sm-6">
+                              <p class="author-category">
+                                  By <a href="">{{nombreUsuario}}</a>
+                                  in <a href="">{{email}}</a>
+                              </p>
+                          </div>
+                          <div class="col-sm-6 right" >
+                              <p class="date-comments">
+                           
+                              </p>
+                          </div>
+                      </div>
+                      <div class="image wow fadeInRight animated"> 
+                          <img src="{{viajes.foto}}" class="img-responsive" alt="Example blog post alt">
+                         
+                      </div>
+                  </div> 
+
+                  <div id="post-content" class="post-body single wow fadeInLeft animated">
+                      <p>
+                          <strong >{{viajes.hotel}}</strong> <br>
+                          
+                          <strong > Precio: {{  viajes.precio}}$</strong> <br>
+                           <em>El viajes sera del {{viajes.fechainicio}} al {{viajes.fechafin}}</em> <br>
+                     
+                           <blockquote>
+                            <p>
+                              {{viajes.comentario}}  </p>
+                        </blockquote>   
+                        <input hidden type="string" value={{viajes.id}} #id>
+                        <input hidden type="string" value={{viajes.cliente}} #cliente>
+
+                        <input hidden type="string" value={{viajes.ciudad}} #ciudad>
+    
+                        <input hidden type="string" value={{viajes.fechainicio}} #fechainicio>
+                        <input hidden type="string" value={{viajes.fechafin}} #fechafin>
+                        <input hidden type="string" value={{viajes.hotel}} #hotel>
+                        <input hidden type="string" value={{viajes.precio}} #precio>
+                        <input hidden type="string" value={{viajes.comentario}} #comentario>
+                        <input hidden type="string" value={{viajes.foto}} #foto>
+
+                
+                       <a type="button" class="btn btn-secondary" (click)="print()">Guardar en pdf</a>
+
+                      <a type="button"class="btn btn-secondary" href="" [routerLink]="['/carrito']" (click)="reservar(id,cliente,ciudad,fechainicio,fechafin,hotel,precio,comentario,foto)">Ir al carrito</a>
+
+        
+
+                  
+
+                   
+                     
+                      
+
+                  </div>
+                
+
+              </section>
+              </div></div></div></div>

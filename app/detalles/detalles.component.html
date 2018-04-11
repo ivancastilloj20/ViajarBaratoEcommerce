@@ -1,0 +1,56 @@
+
+
+        		<link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
+
+
+             <!-- property area -->
+             <div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
+              <div class="container" id="print-section" >
+                  <div class="row" >
+                        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                          <!-- /.feature title -->
+                          <h2>Bienvenido a tus viajes {{nombreUsuario}}</h2>
+                          <p>Elige el viajes que mejor se acerque a tus expectativas, si ninguno de los que aparecen se encuentra a tu gusto, no dudes en ponerte en contacto con nosotros y decirnos el problema: Email: contacta@viajarbarato.com</p>
+                      </div>
+                  </div>
+    
+                  <div class="row"    >
+                      <div class="proerty-th"  >
+                        <div class="col-sm-1 col-md-4" *ngFor="let viajes of coursesObservable | async" style="min-height: 0px;">
+                            
+                              <div class="box-two proerty-item" *ngIf="viajes.cliente==email">
+                                  
+                                <div class="item-thumb">
+                                      <a href="" [routerLink]="['/property', viajes.ciudad]" ><img src="{{viajes.foto}}"></a>
+                                  </div>
+                                  <div class="item-entry overflow">
+                                      <h5><a href="" [routerLink]="['/property', viajes.ciudad]"  >{{viajes.ciudad}}</a></h5><br>
+                                      <h5><a href=""  [routerLink]="['/property', viajes.ciudad]" >{{viajes.hotel}}</a></h5>
+                                      
+                                      <div class="dot-hr"></div>
+                                      <span class="pull-left">El viajes sera del {{viajes.fechainicio}} al {{viajes.fechafin}}</span><br>
+                                      <span class="proerty-price pull-right">Precio: {{  viajes.precio}}$ </span><br>
+                                      <a type="button"class="btn btn-secondary" href=""  [routerLink]="['/property', viajes.ciudad]"  >>Ver más detalles</a>
+
+                                  
+                                  </div>
+                              </div>
+                          </div>
+    
+                        
+                          <div class="col-sm-6 col-md-3 p0">
+                              <div class="box-tree more-proerty text-center">
+                                 
+                                  <div class="more-entry overflow">
+                                    <a type="button" class="btn btn-secondary" (click)="print()">Guardar en pdf</a>
+                          
+                          
+                          
+                                  </div>
+                              </div>
+                          </div>
+    
+                      </div>
+                  </div>
+              </div>
+          </div>

@@ -1,0 +1,26 @@
+
+
+        <div *ngFor="let model of coursesObservable | async" class="card mb-4">
+          <div *ngIf="model.categoria==category || category==undefined">
+            <img class="card-img-top" src='{{model.foto}}' alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">{{ model.nombre }}</h2>
+             
+            
+                <!-- <div id="collapseExample" [ngbCollapse]="isCollapsed"> -->
+                  <div class="card">
+                   Precio: {{  model.precio}} Euros
+                   
+                    <a type="button"class="btn btn-secondary" href=""  [routerLink]="['/detalles', model.categoria]"  >>Ver más detalles</a>
+                  </div>
+                </div> 
+            <!-- </div> -->
+            <div class="card-footer text-muted">
+        
+              <a type="button"class="btn btn-secondary" href="https://www.turitop.com/es/">Reservar</a>
+           <hr>
+            </div>
+          </div>
+          </div>
+          
+      

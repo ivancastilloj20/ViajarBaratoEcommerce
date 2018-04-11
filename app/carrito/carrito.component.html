@@ -1,0 +1,116 @@
+
+
+
+                <link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css" type="text/css" />
+
+
+
+
+
+   <div id="content">
+        <div class="container">
+            <h1>Carrito de la compra de {{nombreUsuario}}</h1> 
+<div class="col-md-8" id="basket" *ngFor="let viajes of carrito  ">
+    
+    <div class="box" >
+
+        <form method="post" action="checkout1.html">
+
+           
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                                <th></th> 
+                            <th colspan="1">Ciudad</th>
+                            
+                            <th>Cantidad</th>
+                            <th>Precio del viaje</th>
+                            
+                            <th>Descuento</th>
+                            <th colspan="1">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <img src="{{viajes.foto}}" alt="{{viajes.ciudad}}">
+                                </a>
+                            </td>
+                            <td><a href="#">{{viajes.ciudad}}</a>
+                            </td>
+                            <td>
+                                <input type="number" value="1" class="form-control">
+                            </td>
+                            <td>${{viajes.precio}}</td>
+                            <td>$0.00</td>
+                            <td>${{viajes.precio}}</td>
+                            <td><a href="#"><i class="fa fa-trash-o"></i></a>
+                            </td>
+                            
+                        </tr>
+                       
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="1">Total</th>
+                            <th colspan="1">{{viajes.precio}}</th>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+            <!-- /.table-responsive -->
+
+            <div class="box-footer">
+                <div class="pull-left">
+                    <a href="category.html" class="btn btn-default"><i class="fa fa-chevron-left"></i> Continue shopping</a>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-default"><i class="fa fa-refresh"></i> Eliminar</button>
+                    <button type="submit" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    </div>
+    <!-- /.box -->
+    <div class="col-md-3">
+        <div class="box" id="order-summary">
+                        <div class="box-header">
+                            <h3>Order summary</h3>
+                        </div>
+                        <p class="text-muted">Shipping and additional costs are calculated based on the values you have entered.</p>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>Order subtotal</td>
+                                        <th>$446.00</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Shipping and handling</td>
+                                        <th>$10.00</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax</td>
+                                        <th>$0.00</th>
+                                    </tr>
+                                    <tr class="total">
+                                        <td>Total</td>
+                                        <th>$456.00</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+<br>
+                </div>
+                <!-- /.col-md-3 -->
+                </div>

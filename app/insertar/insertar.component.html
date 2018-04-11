@@ -1,0 +1,152 @@
+
+
+<div class="container-contact100"  >
+		<div class="wrap-contact100" [hidden]="submitted">
+				
+			<form class="contact100-form validate-form" (ngSubmit)="onSubmit()">
+				<span class="contact100-form-title">
+						Tus vacaciones comienzan
+			<label>AQUÍ</label>
+				</span>
+			
+				<label class="label-input100" for="first-name">Nombre completo*</label>
+				<div class="wrap-input100 validate-input" >
+						<input id="" class="input100" type="text" name="nombre" placeholder="Nombre completo" required [(ngModel)]="model.nombre" >
+						<span class="focus-input100"></span>
+					</div>
+
+				<label class="label-input100" for="email">¿Qué plan llevas?*</label>
+				<div class="wrap-input100 validate-input" >
+					<select id="email" class="input100" type="text" name="email" required [(ngModel)]="model.plan" >
+							<option value="romantico">
+									Romantico
+								</option>
+								<option value="familiar">
+									Familiar
+								</option>
+								<option value="amigos">
+									Amigos
+								</option>
+								<option value="solitario">
+									Retiro espiritual
+								</option>
+						</select>
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<label class="label-input100" for="phone">Número de teléfono*</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" required [(ngModel)]="model.telefono" name="telefono" placeholder="Introduce tu teléfono" >
+					<span class="focus-input100"></span>
+				</div>
+
+		<label class="label-input100" for="phone">Presupuesto*</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" required [(ngModel)]="model.presupuesto" name="presupuesto" placeholder="Presupuesto" >
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message">Preferencia*</label>
+				<div class="wrap-input100 validate-input" >
+					<textarea id="message" class="input100" name="message" required [(ngModel)]="model.preferencia" name="preferencia" placeholder="Cuentanos tus preferencias...playa, montaña, nacional, internacional, tus aficiones. Aquí todo es importante." ></textarea>
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" for="first-name">Introduce la fecha disponible*</label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+					<input id="first-name" class="input100" type="date" name="fechaentrada" placeholder="01/01/2000" 	required [(ngModel)]="model.fechaentrada" >
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+					<input class="input100" type="date" name="fechaultima" placeholder="01/01/2000" 	required [(ngModel)]="model.fechaultima" >
+					<span class="focus-input100"></span>
+				</div>
+			
+
+
+				<div class="container-contact100-form-btn">
+				 <button class="contact100-form-btn" type="submit" >
+					¡Preparad mis vacaciones!
+					</button>
+				</div>
+				
+				<div class="container-contact100-form-btn">
+						<a class="contact100-form-btn" type="button" href="/">
+							Volver a inicio
+						</a>
+					</div>
+				
+				
+
+			
+			</form>
+			
+			
+	
+	
+		
+				
+			<div class="contact100-more col" style="background-image: url('../../assets/images/bg-01.jpg');">
+				<div class="flex-w size1 p-b-47">
+				
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							¡Hola Sr. {{nombreUsuario}}, nos alegra enormenmente que haya decidido elegir nuestros servicios para hacernos cargo de sus vacaciones.
+						</span>
+
+						<span class="txt2">
+							¡Si no le conseguimos unas vacaciones, le devolvemos su dinero sin compromiso!
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							No dude que le proporcionaremos variedad de elección y no dudaremos en llamarle por teléfono para que pueda elegir el mejor destino.
+						</span>
+
+				
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Por supuesto también recibirá todo lo necesario vía email para que no tenga que preocuparse de nada en sus vacaciones.
+						</span>
+
+						<span class="txt3">
+							Le enviaremos todos los datos a su email {{email}}
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+	<script>
+			$(".selection-2").select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $('#dropDownSelect1')
+			});
+		</script>
+		<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+		  
+				gtag('config', 'UA-23581568-13');
+			  </script>

@@ -1,0 +1,128 @@
+<div class="container-contact100"  >
+		<div class="wrap-contact100" [hidden]="submitted">
+				
+			<form class="contact100-form validate-form" (ngSubmit)="onSubmit()">
+				<span class="contact100-form-title">
+						Introduce el viaje personalizado del usuario.
+			<label>AQUÍ</label>
+				</span>
+				<label class="label-input100" for="first-name">Introduce ID*</label>
+				<div class="wrap-input100 validate-input" >
+						<input id="" class="input100" type="text" name="id" placeholder="Número Identificador" required [(ngModel)]="viajes.id" >
+						<span class="focus-input100"></span>
+					</div>
+			
+				<label class="label-input100" for="first-name">Email del usuario*</label>
+				<div class="wrap-input100 validate-input" >
+						<input id="" class="input100" type="text" name="cliente" placeholder="Nombre del usuario" required [(ngModel)]="viajes.cliente" >
+						<span class="focus-input100"></span>
+					</div>
+
+
+				<label class="label-input100" for="phone">Ciudad*</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" required [(ngModel)]="viajes.ciudad" name="ciudad" placeholder="Introduce la ciudad" >
+					<span class="focus-input100"></span>
+				</div>
+
+		<label class="label-input100" for="phone">Hotel*</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" required [(ngModel)]="viajes.hotel" name="hotel" placeholder="Introduce el hotel" >
+					<span class="focus-input100"></span>
+        </div>
+        <label class="label-input100" for="phone">Precio Final*</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" required [(ngModel)]="viajes.precio" name="precio" placeholder="Introduce el precio" >
+					<span class="focus-input100"></span>
+        </div>
+        
+        <label class="label-input100" for="phone">Foto*</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" required [(ngModel)]="viajes.foto" name="foto" placeholder="Introduce una fotografía" >
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message">Comentario*</label>
+				<div class="wrap-input100 validate-input" >
+					<textarea id="message" class="input100" name="message" required [(ngModel)]="viajes.comentario" name="comentario" placeholder="Cuentale las condiciones" ></textarea>
+					<span class="focus-input100"></span>
+				</div>
+				<label class="label-input100" for="first-name">Introduce las fechas*</label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+					<input id="first-name" class="input100" type="date" name="fechainicio" placeholder="01/01/2000" 	required [(ngModel)]="viajes.fechainicio" #fechaentrada>
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+					<input class="input100" type="date" name="fechafin" placeholder="01/01/2000" 	required [(ngModel)]="viajes.fechafin" #fechaultima>
+					<span class="focus-input100"></span>
+				</div>
+			
+
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn" type="submit" >
+         
+                Enviar vacaciones
+              
+					</button>
+				</div>
+				
+				<div class="container-contact100-form-btn">
+						<a class="contact100-form-btn" type="button" href="/">
+							Volver a inicio
+						</a>
+					</div>
+				
+      </form>
+   
+	
+				
+			<div class="contact100-more col" style="background-image: url('../../assets/images/bg-01.jpg');">
+				<div class="flex-w size1 p-b-47">
+				
+
+					<div class="flex-col size2">
+					
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						
+				
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+	<script>
+			$(".selection-2").select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $('#dropDownSelect1')
+			});
+		</script>
+		<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+		  
+				gtag('config', 'UA-23581568-13');
+			  </script>
